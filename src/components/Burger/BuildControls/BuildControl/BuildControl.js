@@ -3,12 +3,21 @@ import classes from './BuildControl.module.css';
 import BuildControls from '../BuildControls';
 
 const BuildControl = (props) => (
-    <div>
-        <div>{props.igLabel}</div>
-        <button>Add</button>
-        <butto>Remove</butto>
+    <div className={classes.BuildControl}>
+        <div className={classes.Label}>{props.igLabel}</div>
+        <button 
+            className={classes.More} 
+            onClick={props.added}>
+            Add
+        </button>
+        <button 
+            className={classes.Less} 
+            onClick={props.removed} 
+            disabled={props.disabled}>
+            Remove
+        </button>
     </div>
 );
 
 
-export default BuildControls;
+export default BuildControl;
