@@ -11,8 +11,9 @@ const input = (props) => {
 
     switch (props.elementType) {
         case ('input'):
-            inputEle = <input 
-                key={props.key}
+            inputEle = 
+            <input 
+                key={props.id}
                 className={inputClasses.join(' ')}
                 {...props.elementConfig}
                 value={props.value}
@@ -21,7 +22,7 @@ const input = (props) => {
             break;
         case ('textarea'):
             inputEle = <textarea
-                key={props.key}
+                key={props.id}
                 className={inputClasses.join(' ')}
                 {...props.elementConfig}
                 value={props.value}
@@ -31,7 +32,7 @@ const input = (props) => {
         case ('select'):
             inputEle = (
                 <select
-                    key={props.key}
+                    key={props.id}
                     className={classes.InputEle}
                     value={props.value}
                     onChange={props.changed}
@@ -48,7 +49,7 @@ const input = (props) => {
             inputEle = <input 
                 className={classes.InputEle}
                 {...props.elementConfig}
-                value={props.value}/>;
+                value={props.value} key={props.id}/>;
     }
 
     return (
