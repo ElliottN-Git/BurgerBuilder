@@ -1,5 +1,16 @@
 {
   "hosting": {
+    "headers": [
+      {
+        "source": "https://elliottnixon.com/",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
     "public": "build",
     "ignore": [
       "firebase.json",
