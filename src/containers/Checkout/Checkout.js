@@ -7,20 +7,12 @@ import ContactData from './ContactData/ContactData';
 
 export class Checkout extends Component {
 
-    componentWillMount() {
-        // this.props.onInitPurchase();
-        //     const query = new URLSearchParams(this.props.location.search);
-        //     const ingredients = {};
-        //     let price = 0;
-        //     for (let param of query.entries()) {
-        //         if (param[0] === 'price') {
-        //             price = param[1];
-        //         } else {
-        //             ingredients[param[0]] = +param[1];
-        //         }
-        //     }
-        //     this.setState({ ingredients: ingredients, price: price });
-    }
+    // componentDidMount() {
+    //     if(this.props.ingds === null) {
+    //         console.log(this.props.ingds);
+    //         this.props.history.redirect('/');
+    //     }
+    // }
 
     checkoutCancelledHandler = () => {
         this.props.history.goBack();

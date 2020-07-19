@@ -43,9 +43,19 @@ export class Auth extends Component {
     }
 
     componentDidMount() {
-        if (!this.props.buildingBurger && this.props.authRedirect !== '/') {
-            this.props.onSetAuthRedirectPath();
+        console.log('AUTH cDM: isAuth: ' + this.props.isAuth + ', building: ' + this.props.buildingBurger);
+        if (this.props.isAuth === false) {
+            this.props.onSetAuthRedirectPath('/auth');
+        } else if (this.props.buildingBurger === true && this.props.isAuth === true) {
+            this.props.onSetAuthRedirectPath('/checkout');
         }
+    }
+
+    componentDidUpdate() {
+        console.log('AUTH cDU: isAuth: ' + this.props.isAuth);
+        if (this.props.buildingBurger === true && this.props.isAuth === true) {
+            this.props.onSetAuthRedirectPath('/checkout');
+        } 
     }
 
     checkValidity(value, rules) {
@@ -111,19 +121,17 @@ export class Auth extends Component {
 
         if (this.props.loading) {
             form = <Spinner />
-        }
+        };
 
         let errorMessage = null;
         if (this.props.error) {
             errorMessage = (
                 <p>{this.props.error.message}</p>
             );
-        }
+        };
 
-        let authRedirect = null;
-        if (this.props.isAuth) {
-            authRedirect = <Redirect to={this.props.authRedirect} />
-        }
+
+        let authRedirect = <Redirect to={this.props.authRedirect} />;
 
         return (
             <div className={classes.Auth}>
@@ -154,7 +162,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onAuth: (email, password, isSignUp) => dispatch(actions.auth(email, password, isSignUp)),
-        onSetAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath('/'))
+        onSetAuthRedirectPath: (path) => dispatch(actions.setAuthRedirectPath(path))
     };
 };
 
