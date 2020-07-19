@@ -43,7 +43,7 @@ export class Auth extends Component {
     }
 
     componentDidMount() {
-        console.log('AUTH cDM: isAuth: ' + this.props.isAuth + ', building: ' + this.props.buildingBurger);
+        // console.log('AUTH cDM: isAuth: ' + this.props.isAuth + ', building: ' + this.props.buildingBurger);
         if (this.props.isAuth === false) {
             this.props.onSetAuthRedirectPath('/auth');
         } else if (this.props.buildingBurger === true && this.props.isAuth === true) {
@@ -52,7 +52,7 @@ export class Auth extends Component {
     }
 
     componentDidUpdate() {
-        console.log('AUTH cDU: isAuth: ' + this.props.isAuth);
+        // console.log('AUTH cDU: isAuth: ' + this.props.isAuth);
         if (this.props.buildingBurger === true && this.props.isAuth === true) {
             this.props.onSetAuthRedirectPath('/checkout');
         } 
