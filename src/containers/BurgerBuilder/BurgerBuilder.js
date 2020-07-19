@@ -96,7 +96,7 @@ class BurgerBuilder extends Component {
         
         // const queryString = queryParams.join('&');
         this.props.onInitPurchase();
-        this.props.history.push('/checkout');
+        this.props.history.push('/checkout/contact-data');
     }
 
 
