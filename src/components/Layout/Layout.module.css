@@ -1,4 +1,7 @@
 .Content {
-    margin-top: 72px;
+    margin-top: 56px;
     /* border: 1px solid black; */
+    display: flex;
+    height: calc(100vh - 56px);
+    background-color: rgb(30,30,30);
 }
