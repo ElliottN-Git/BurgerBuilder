@@ -4,4 +4,7 @@
     display: flex;
     height: calc(100vh - 56px);
     background-color: rgb(30,30,30);
+
+    width: 100%;
+    justify-content: space-evenly;
 }

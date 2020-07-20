@@ -1,11 +1,24 @@
 .ContactData {
-    margin: 20px auto;
-    width: 80%;
+    /* display: flex; */
+    margin: 20px;
+    width: 100%;
+    height: fit-content;
     text-align: center;
     box-shadow: 0 2px 3px #ccc;
     border: 1px solid #eee;
     padding: 10px;
     box-sizing: border-box;
+    color: whitesmoke;
+    background-color: rgb(75, 75, 75);
+
+    /* width: auto;
+    height: fit-content;
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 20px; */
 }
 
 @media (min-width: 600px) {

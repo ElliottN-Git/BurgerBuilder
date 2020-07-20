@@ -2,17 +2,10 @@ import React, { Component } from 'react';
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import * as actions from '../../store/actions/index';
 import ContactData from './ContactData/ContactData';
+import classes from './Checkout.module.css';
 
 export class Checkout extends Component {
-
-    // componentDidMount() {
-    //     if(this.props.ingds === null) {
-    //         console.log(this.props.ingds);
-    //         this.props.history.redirect('/');
-    //     }
-    // }
 
     checkoutCancelledHandler = () => {
         this.props.history.goBack();
@@ -28,7 +21,7 @@ export class Checkout extends Component {
         if (this.props.ingds) {
             const purchasedRedirect = this.props.purchased ? <Redirect to="/" /> : null;
             summary = (
-                <div>
+                <div className={classes.Checkout}>
                     {purchasedRedirect}
                     <CheckoutSummary
                         ingredients={this.props.ingds}

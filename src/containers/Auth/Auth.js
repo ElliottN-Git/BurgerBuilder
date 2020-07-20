@@ -49,7 +49,7 @@ export class Auth extends Component {
         } else if (this.props.isAuth && this.props.buildingBurger === false) {
             this.props.onSetAuthRedirectPath('/');
         } else if (this.props.buildingBurger === true && this.props.isAuth === true) {
-            this.props.onSetAuthRedirectPath('/checkout');
+            this.props.onSetAuthRedirectPath('/checkout/contact-data');
         }
     }
 
@@ -58,7 +58,7 @@ export class Auth extends Component {
         if (this.props.isAuth && this.props.buildingBurger === false) {
             this.props.onSetAuthRedirectPath('/');
         } else if (this.props.buildingBurger === true && this.props.isAuth === true) {
-            this.props.onSetAuthRedirectPath('/checkout');
+            this.props.onSetAuthRedirectPath('/checkout/contact-data');
         } 
     }
 
