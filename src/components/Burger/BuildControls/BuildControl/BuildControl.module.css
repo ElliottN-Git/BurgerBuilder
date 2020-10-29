@@ -52,11 +52,11 @@
 }
 
 .BuildControl .Less:hover, .BuildControl .Less:active {  
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(30, 0, 0);
     color: white;
 }
 
 .BuildControl .More:hover,.BuildControl .More:active {
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(0, 30, 0);
     color: white;
 }
